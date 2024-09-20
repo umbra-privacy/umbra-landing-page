@@ -1,23 +1,9 @@
 'use client';
-import Spinner from '@/components/Spinner';
 import { GITHUB_URL } from '@/constants';
-import { useSignup } from '@/utils/react-query-hooks';
 import Image from 'next/image';
 import Link from 'next/link';
-import { useState } from 'react';
 
 export default function Support() {
-  const [name, setName] = useState('');
-  const [email, setEmail] = useState('');
-  const [message, setMessage] = useState('');
-  const signupMutation = useSignup({});
-
-  const handleSignup = () => {
-    if (email && name) {
-      signupMutation.mutate({ email, name, message });
-    }
-  };
-
   return (
     <body className="leading-normal tracking-normal text-white bg-cover bg-fixed">
       <div className="min-h-screen">
@@ -88,77 +74,103 @@ export default function Support() {
         </div>
 
         <div className="container pt-6 mx-auto flex flex-wrap flex-col items-center min-h-[calc(100vh-150px)]">
-          <form className="bg-primary-foreground text-white w-full shadow-lg rounded-lg px-8 pt-6 pb-8 mb-4 max-w-[900px]">
-            <div className="mb-4">
-              <label
-                className="block py-2 font-bold mb-2"
-                htmlFor="emailaddress"
-              >
-                If you get any issue please reachout to us
-              </label>
-              <div className="flex flex-col gap-4">
-                <div className="grid grid-cols-2 gap-4">
-                  <div>
-                    <span className="mb-1 block">Name</span>
-                    <input
-                      className="shadow appearance-none bg-transparent text-white border-secondary/80 border rounded w-full p-3 leading-tight focus:ring transform transition hover:scale-105 duration-300 ease-in-out"
-                      id="name"
-                      type="text"
-                      placeholder="Full Name"
-                      value={name}
-                      onChange={(e) => {
-                        setName(e.target.value);
-                      }}
-                    />
-                  </div>
+          <div>
+            <h1 className="text-secondary text-4xl font-semibold">
+              Umbra Wallet Privacy Policy
+            </h1>
 
-                  <div>
-                    <span className="mb-1 block">Email</span>
+            <p>Last updated: 20 sept 2024</p>
+            <ul className="flex  flex-col divide-secondary divide-y ps-3 py-6">
+              <li className="py-4">
+                <h2 className="font-semibold text-2xl mb-2">1. Introduction</h2>
+                <p>
+                  Umbra Wallet is committed to protecting your privacy. This
+                  Privacy Policy explains how we collect, use, and safeguard
+                  your information when you use our browser extension.
+                </p>
+              </li>
 
-                    <input
-                      className="shadow appearance-none bg-transparent text-white border-secondary/80 border rounded w-full p-3 leading-tight focus:ring transform transition hover:scale-105 duration-300 ease-in-out"
-                      id="emailaddress"
-                      type="email"
-                      value={email}
-                      placeholder="Email Address"
-                      onChange={(e) => {
-                        setEmail(e.target.value);
-                      }}
-                    />
-                  </div>
-                </div>
+              <li className="py-4">
+                <h2 className="font-semibold text-2xl mb-2">
+                  2. Information We Collect
+                </h2>
+                <p>
+                  We collect only the information necessary to provide and
+                  improve our services:
+                </p>
 
-                <div>
-                  <span className="mb-1 block">Message</span>
+                <ul className="list-disc ps-6">
+                  <li>Wallet addresses</li>
+                  <li>Transaction data on the Aztec network</li>
+                  <li>Usage data to improve our user interface</li>
+                </ul>
+              </li>
 
-                  <textarea
-                    name=""
-                    placeholder="Your Message"
-                    id=""
-                    cols={10}
-                    onChange={(e) => {
-                      setMessage(e.target.value);
-                    }}
-                    rows={6}
-                    className="shadow text-white appearance-none bg-transparent border-secondary/80 border rounded w-full p-3  leading-tight focus:ring transform transition hover:scale-105 duration-300 ease-in-out"
-                  ></textarea>
-                </div>
-              </div>
-            </div>
+              <li className="py-4">
+                <h2 className="font-semibold text-2xl mb-2">
+                  3. How We Use Your Information
+                </h2>
+                <p>We use the collected information to:</p>
 
-            <div className="flex items-center justify-end pt-4">
-              <button
-                className="bg-gradient text-white font-bold py-2 px-8 rounded focus:ring transform transition hover:scale-105 duration-300 ease-in-out relative"
-                type="button"
-                onClick={handleSignup}
-              >
-                Send Message
-                <span className="absolute right-2 top-1/2 -translate-y-1/2">
-                  {signupMutation.isLoading && <Spinner />}
-                </span>
-              </button>
-            </div>
-          </form>
+                <ul className="list-disc ps-6">
+                  <li>
+                    Facilitate your interactions with decentralized applications
+                    on the Aztec network
+                  </li>
+                  <li>Improve our wallet functionality and user experience</li>
+                  <li>Provide customer support</li>
+                </ul>
+              </li>
+
+              <li className="py-4">
+                <h2 className="font-semibold text-2xl mb-2">
+                  4. Data Storage and Security
+                </h2>
+                <p>
+                  We implement industry-standard security measures to protect
+                  your information. Your private keys and sensitive data are
+                  stored locally on your device and are never transmitted to our
+                  servers.
+                </p>
+              </li>
+
+              <li className="py-4">
+                <h2 className="font-semibold text-2xl mb-2">
+                  5. Third-Party Services
+                </h2>
+                <p>
+                  Umbra Wallet may interact with third-party decentralized
+                  applications. We are not responsible for the privacy practices
+                  of these third parties.
+                </p>
+              </li>
+
+              <li className="py-4">
+                <h2 className="font-semibold text-2xl mb-2">
+                  6. Changes to This Privacy Policy
+                </h2>
+                <p>
+                  We may update our Privacy Policy from time to time. We will
+                  notify you of any changes by posting the new Privacy Policy on
+                  this page.
+                </p>
+              </li>
+
+              <li className="py-4">
+                <h2 className="font-semibold text-2xl mb-2">7. Contact Us</h2>
+                <p>
+                  If you have any questions about this Privacy Policy, please
+                  contact us at:{' '}
+                  <a
+                    href="mailto:satyamsgsits1994@gmail.com"
+                    className="text-secondary underline hover:no-underline"
+                  >
+                    satyamsgsits1994@gmail.com
+                  </a>
+                </p>
+              </li>
+            </ul>
+          </div>
           <div className="mt-auto">
             <div className="mx-auto md:pt-16">
               <p className="text-secondary font-bold pb-8 lg:pb-6 text-center">
