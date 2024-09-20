@@ -20,7 +20,7 @@ export default function Component() {
 
   const handleSignup = () => {
     if (email && name) {
-      signupMutation.mutate({ email, name });
+      signupMutation.mutate({ email, name, message: '' });
     }
   };
 
