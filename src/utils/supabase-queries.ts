@@ -2,9 +2,9 @@ import { AppSupabaseClient, Table } from '@/types';
 
 export const getAllEmails = async (
   supabase: AppSupabaseClient
-): Promise<Array<Table<'fitrace_signup_emails'>>> => {
+): Promise<Array<Table<'umbra_signup_emails'>>> => {
   const { data, error } = await supabase
-    .from('fitrace_signup_emails')
+    .from('umbra_signup_emails')
     .select('*');
 
   if (error) {
@@ -16,10 +16,10 @@ export const getAllEmails = async (
 
 export const insertEmail = async (
   supabase: AppSupabaseClient,
-  item: { name: string; email: string }
-): Promise<Table<'fitrace_signup_emails'>> => {
+  item: { name: string; email: string; message: string }
+): Promise<Table<'umbra_signup_emails'>> => {
   const { data, error } = await supabase
-    .from('fitrace_signup_emails')
+    .from('umbra_signup_emails')
     .insert(item)
     .select('*')
     .single();

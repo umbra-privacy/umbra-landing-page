@@ -19,8 +19,20 @@ export const useSignup = ({
 }) => {
   const toastRef = useRef<string | null>(null);
   return useMutation(
-    async ({ email, name }: { email: string; name: string }) => {
-      return insertEmail(supabaseUserClientComponentClient, { name, email });
+    async ({
+      email,
+      name,
+      message,
+    }: {
+      email: string;
+      name: string;
+      message: string;
+    }) => {
+      return insertEmail(supabaseUserClientComponentClient, {
+        name,
+        email,
+        message,
+      });
     },
     {
       onMutate: () => {
@@ -28,7 +40,7 @@ export const useSignup = ({
         onMutate?.();
       },
       onSuccess: () => {
-        toast.success('You will receive an email with our app preview link', {
+        toast.success('Data send to us successfully.', {
           id: toastRef.current ?? undefined,
         });
 

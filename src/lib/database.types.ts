@@ -68,6 +68,27 @@ export type Database = {
           },
         ]
       }
+      global_config: {
+        Row: {
+          config_values: Json
+          created_at: string
+          id: number
+          name: string | null
+        }
+        Insert: {
+          config_values: Json
+          created_at?: string
+          id?: number
+          name?: string | null
+        }
+        Update: {
+          config_values?: Json
+          created_at?: string
+          id?: number
+          name?: string | null
+        }
+        Relationships: []
+      }
       player_profile: {
         Row: {
           avatar_url: string | null
@@ -113,6 +134,39 @@ export type Database = {
           email?: string
           id?: string
           name?: string
+        }
+        Relationships: []
+      }
+      tileville_builder_nfts: {
+        Row: {
+          created_at: string
+          img_url: string
+          name: string
+          nft_id: number
+          owner_address: string | null
+          price: number
+          traits: Json | null
+          txn_hash: string | null
+        }
+        Insert: {
+          created_at?: string
+          img_url: string
+          name: string
+          nft_id?: number
+          owner_address?: string | null
+          price: number
+          traits?: Json | null
+          txn_hash?: string | null
+        }
+        Update: {
+          created_at?: string
+          img_url?: string
+          name?: string
+          nft_id?: number
+          owner_address?: string | null
+          price?: number
+          traits?: Json | null
+          txn_hash?: string | null
         }
         Relationships: []
       }
@@ -212,6 +266,30 @@ export type Database = {
           txn_hash?: string
           txn_status?: string
           wallet_address?: string
+        }
+        Relationships: []
+      }
+      umbra_signup_emails: {
+        Row: {
+          created_at: string
+          email: string | null
+          id: number
+          message: string | null
+          name: string | null
+        }
+        Insert: {
+          created_at?: string
+          email?: string | null
+          id?: number
+          message?: string | null
+          name?: string | null
+        }
+        Update: {
+          created_at?: string
+          email?: string | null
+          id?: number
+          message?: string | null
+          name?: string | null
         }
         Relationships: []
       }

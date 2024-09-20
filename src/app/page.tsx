@@ -1,8 +1,6 @@
 'use client';
 import Spinner from '@/components/Spinner';
-import {
-  GITHUB_URL,
-} from '@/constants';
+import { GITHUB_URL } from '@/constants';
 import { useSignup } from '@/utils/react-query-hooks';
 import { useState } from 'react';
 import {
@@ -14,7 +12,6 @@ import {
 } from '@/components/ui/carousel';
 import Autoplay from 'embla-carousel-autoplay';
 import Image from 'next/image';
-import { PresentationModal } from '@/components/PresentationModal';
 
 export default function Component() {
   const [name, setName] = useState('');
@@ -31,22 +28,57 @@ export default function Component() {
     {
       id: 1,
       title: 'landing',
-      path: '/screenshots/newShot1.jpg',
+      path: '/screenshots/ss1.png',
     },
     {
       id: 2,
       title: 'game',
-      path: '/screenshots/newShot2.jpg',
+      path: '/screenshots/ss2.png',
     },
     {
       id: 3,
       title: 'rules',
-      path: '/screenshots/newShot3.jpg',
+      path: '/screenshots/ss3.png',
     },
     {
       id: 4,
       title: 'settings',
-      path: '/screenshots/newShot4.jpg',
+      path: '/screenshots/ss4.png',
+    },
+    {
+      id: 5,
+      title: 'settings',
+      path: '/screenshots/ss5.png',
+    },
+    {
+      id: 6,
+      title: 'settings',
+      path: '/screenshots/ss6.png',
+    },
+    {
+      id: 7,
+      title: 'settings',
+      path: '/screenshots/ss7.png',
+    },
+    {
+      id: 8,
+      title: 'settings',
+      path: '/screenshots/ss8.png',
+    },
+    {
+      id: 9,
+      title: 'settings',
+      path: '/screenshots/ss9.png',
+    },
+    {
+      id: 10,
+      title: 'settings',
+      path: '/screenshots/ss10.png',
+    },
+    {
+      id: 11,
+      title: 'settings',
+      path: '/screenshots/ss11.png',
     },
   ];
 
@@ -55,59 +87,39 @@ export default function Component() {
       <div className="min-h-screen">
         <div className="w-full container mx-auto">
           <div className="w-full flex items-center justify-between">
-            <a className="flex items-center text-primary-foreground no-underline hover:no-underline font-bold text-2xl lg:text-4xl">
-              Um
-              <span className="text-gradient">bra Wallet</span>
-            </a>
+            <button>
+              {/* <Image src="logo.svg" alt="" width={100} height={100} /> */}
+              <Image
+                src="logo.svg"
+                className="transform hover:scale-125 duration-300 ease-in-out"
+                alt="Logo"
+                width={60}
+                height={48}
+              />
+            </button>
             <div className="flex w-1/2 justify-end content-center">
               <div className="">
-                <PresentationModal />
-              </div>
-
-              <div className="">
                 <a
-                  className="inline-block text-primary-foreground no-underline hover:opacity-80 hover:text-underline text-center h-10 p-2 md:h-auto md:p-4 transform hover:scale-125 duration-300 ease-in-out"
-                  href='/'
+                  className="inline-block text-secondary no-underline hover:opacity-80 hover:text-underline text-center h-10 p-2 md:h-auto md:p-4 transform hover:scale-125 duration-300 ease-in-out"
+                  href="https://www.youtube.com/watch?v=EtYsWHkD7t0"
                   target="_blank"
                 >
-                  Pitch Deck
+                  Watch Demo
                 </a>
               </div>
 
               <div className="">
                 <a
-                  className="inline-block text-primary-foreground no-underline hover:opacity-80 hover:text-underline text-center h-10 p-2 md:h-auto md:p-4 transform hover:scale-125 duration-300 ease-in-out"
-                  href='/'
-                  target="_blank"
+                  className="inline-block text-secondary no-underline hover:opacity-80 hover:text-underline text-center h-10 p-2 md:h-auto md:p-4 transform hover:scale-125 duration-300 ease-in-out"
+                  href="/support"
                 >
-                  Documentation
-                </a>
-              </div>
-              <div className="">
-                <a
-                  className="inline-block text-primary-foreground no-underline hover:opacity-80 hover:text-underline text-center h-10 p-2 md:h-auto md:p-4 transform hover:scale-125 duration-300 ease-in-out"
-                  href='/'
-                  target="_blank"
-                >
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    x="0px"
-                    y="0px"
-                    width={24}
-                    height={24}
-                    viewBox="0 0 50 50"
-                  >
-                    <path
-                      fill="white"
-                      d="M 6.9199219 6 L 21.136719 26.726562 L 6.2285156 44 L 9.40625 44 L 22.544922 28.777344 L 32.986328 44 L 43 44 L 28.123047 22.3125 L 42.203125 6 L 39.027344 6 L 26.716797 20.261719 L 16.933594 6 L 6.9199219 6 z"
-                    />
-                  </svg>
+                  Support
                 </a>
               </div>
 
               <div className="">
                 <a
-                  className="inline-block text-primary-foreground no-underline hover:opacity-80 hover:text-underline text-center h-10 p-2 md:h-auto md:p-4 transform hover:scale-125 duration-300 ease-in-out"
+                  className="inline-block text-secondary no-underline hover:opacity-80 hover:text-underline text-center h-10 p-2 md:h-auto md:p-4 transform hover:scale-125 duration-300 ease-in-out"
                   target="_blank"
                   href={GITHUB_URL}
                 >
@@ -141,24 +153,28 @@ export default function Component() {
         <div className="container pt-6 mx-auto flex flex-wrap flex-col md:flex-row items-center">
           <div className="grid grid-cols-12">
             <div className="flex flex-col justify-center lg:items-start overflow-y-hidden col-span-7">
-              <h1 className="my-4 text-3xl md:text-5xl text-white opacity-75 font-bold leading-tight text-center md:text-left">
+              <h1 className="my-4 text-3xl md:text-5xl text-secondary opacity-75 font-bold leading-tight text-center md:text-left">
                 Umbra Wallet{' '}
-                <span className="text-gradient">
-                  is a Web3 Privacy Focused wallet.
+                <span className="">
+                  is a Web3 Privacy Focused{' '}
+                  <span className="text-gradient">wallet.</span>
                 </span>
               </h1>
               <p className="leading-normal text-base md:text-xl mb-8 text-center md:text-left">
-               Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque eum earum qui. Voluptatem, eligendi alias impedit fugit dolorem totam exercitationem rerum quas soluta tenetur aut ea accusantium eum, excepturi nemo.
-               Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut perferendis culpa, dignissimos, repellat sapiente in maiores cumque expedita libero eligendi voluptatum dolorum. Quam enim maxime distinctio obcaecati vero nemo commodi?
+                Umbra is at the frontier, leading the way in innovation and
+                user-centric design. We're not just building a wallet; we're
+                crafting the cornerstone of zero-knowledge application
+                interaction design. With Umbra, you're stepping into the future
+                of privacy-focused blockchain interactions.
               </p>
 
-              <form className="bg-[#2e236c99] text-white w-full shadow-lg rounded-lg px-8 pt-6 pb-8 mb-4 max-w-[500px]">
+              <form className="bg-primary-foreground text-white w-full shadow-lg rounded-lg px-8 pt-6 pb-8 mb-4 max-w-[500px]">
                 <div className="mb-4">
                   <label
                     className="block py-2 font-bold mb-2"
                     htmlFor="emailaddress"
                   >
-                    Signup for our preview version
+                    signup to keep receiving updates
                   </label>
 
                   <input
@@ -190,7 +206,7 @@ export default function Component() {
                     type="button"
                     onClick={handleSignup}
                   >
-                    Sign Up for a beta version
+                    signup to keep receiving updates
                     <span className="absolute right-2 top-1/2 -translate-y-1/2">
                       {signupMutation.isLoading && <Spinner />}
                     </span>
@@ -198,7 +214,7 @@ export default function Component() {
                 </div>
               </form>
             </div>
-            <div className="w-full p-12 overflow-hidden col-span-5 text-primary-foreground">
+            <div className="w-full p-12 overflow-hidden col-span-5 text-secondary">
               <Carousel
                 opts={{
                   align: 'start',
@@ -218,7 +234,7 @@ export default function Component() {
                           src={path}
                           alt={title}
                           className="rounded-xl rotate-[4deg] hover:rotate-12 transition-all h-[600px] object-cover mx-auto"
-                          width={250}
+                          width={360}
                           height={620}
                         />
                       </CarouselItem>
@@ -232,25 +248,18 @@ export default function Component() {
           </div>
 
           <div className="mx-auto md:pt-16">
-            <p className="text-primary-foreground font-bold pb-8 lg:pb-6 text-center">
-              Download our app:
+            <p className="text-secondary font-bold pb-8 lg:pb-6 text-center">
+              Download our extension:
             </p>
-            <div className="flex w-full justify-center md:justify-start pb-24 lg:pb-0 fade-in">
+            <button className="flex w-full justify-center md:justify-start pb-24 lg:pb-0 fade-in">
               <Image
-                src="app_store.svg"
+                src="chrome.extStore.svg"
                 className="h-12 transform hover:scale-125 duration-300 ease-in-out"
                 alt="app store"
                 width={190}
                 height={48}
               />
-              <Image
-                src="play_store.svg"
-                className="h-12 transform hover:scale-125 duration-300 ease-in-out"
-                alt="play store"
-                width={170}
-                height={48}
-              />
-            </div>
+            </button>
           </div>
 
           <div className="w-full pt-16 pb-6 text-sm text-center md:text-left fade-in">
