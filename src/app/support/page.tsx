@@ -20,7 +20,7 @@ export default function Support() {
 
   return (
     <body className="leading-normal tracking-normal text-white bg-cover bg-fixed">
-      <div className="min-h-screen">
+      <div className="">
         <div className="w-full container mx-auto">
           <div className="w-full flex items-center justify-between">
             <Link href="/">
@@ -87,7 +87,7 @@ export default function Support() {
           </div>
         </div>
 
-        <div className="container pt-6 mx-auto flex flex-wrap flex-col items-center min-h-[calc(100vh-150px)]">
+        <div className="container pt-6 mx-auto flex flex-wrap flex-col items-center">
           <form className="bg-primary-foreground text-white w-full shadow-lg rounded-lg px-8 pt-6 pb-8 mb-4 max-w-[900px]">
             <div className="mb-4">
               <label
@@ -159,30 +159,6 @@ export default function Support() {
               </button>
             </div>
           </form>
-          <div className="mt-auto">
-            <div className="mx-auto md:pt-16">
-              <p className="text-secondary font-bold pb-8 lg:pb-6 text-center">
-                Download our extension:
-              </p>
-              <button className="flex w-full justify-center md:justify-start pb-24 lg:pb-0 fade-in">
-                <Image
-                  src="chrome.extStore.svg"
-                  className="h-12 transform hover:scale-125 duration-300 ease-in-out"
-                  alt="app store"
-                  width={190}
-                  height={48}
-                />
-              </button>
-            </div>
-            <div className="w-full pt-16 pb-6 text-sm text-center md:text-left fade-in">
-              <a
-                className="text-gray-500 no-underline hover:no-underline"
-                href="#"
-              >
-                &copy; Umbra Wallet 2024
-              </a>
-            </div>
-          </div>
         </div>
       </div>
     </body>
