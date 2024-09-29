@@ -23,8 +23,11 @@ const Footer = () => {
         </Link>
       </div>
 
-      <div className="w-full pt-16 pb-6 text-sm text-center md:text-left fade-in">
-        <a className="text-gray-500 no-underline hover:no-underline" href="#">
+      <div className="w-full pt-16 pb-6 text-sm md:text-left fade-in text-center flex items-center justify-center">
+        <a
+          className="text-gray-500 no-underline hover:no-underline text-center"
+          href="#"
+        >
           &copy; Umbra Wallet 2024
         </a>
       </div>
