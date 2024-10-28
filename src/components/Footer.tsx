@@ -1,4 +1,3 @@
-import Image from 'next/image';
 import Link from 'next/link';
 
 const Footer = () => {
@@ -11,15 +10,9 @@ const Footer = () => {
         <Link
           href="https://github.com/satyambnsal/umbra/releases/tag/0.011"
           target="_blank"
-          className="fade-in"
+          className="fade-in text-secondary underline hover:no-underline"
         >
-          <Image
-            src="chrome.extStore.svg"
-            className="h-12 transform hover:scale-125 duration-300 ease-in-out"
-            alt="app store"
-            width={190}
-            height={48}
-          />
+          Github Releases
         </Link>
       </div>
 
